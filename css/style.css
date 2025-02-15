@@ -86,7 +86,7 @@ footer .col-12 {
   background-color: var(--color-bg-tertiary);
 }
 .btn-success{
-  position: absolute;
+  position: fixed;
   right: 10px ;
   bottom: 10px;
 }
