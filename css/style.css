@@ -97,3 +97,14 @@ footer .col-12 {
     text-align: center !important;
   }
 }
+#root .row {
+  animation: appear 500ms ease-in-out;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
