@@ -24,6 +24,7 @@ html {
   min-height: 100vh;
   min-width: 100%;
   background: linear-gradient(var(--bg-gradient));
+  position: relative;
 }
 .logo {
   font: normal bolder 44px var(--font-logo);
@@ -67,12 +68,32 @@ nav .navbar-collapse {
 /* NAVBAR END */
 /* HOME START */
 .row {
-    color: var(--color-text);
-    font: normal normal 1.2em var(--font-text);
+  color: var(--color-text);
+  font: normal normal 1.2em var(--font-text);
 }
 .img-fluid.rounded-circle {
-    transition: all 300ms ease-in-out;
-    cursor: pointer;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
 }
-
 /* HOME END */
+/* FOOTER START */
+footer {
+  background-color: var(--color-bg-primary);
+  height: 200px;
+  color: var(--color-text);
+}
+footer .col-12 {
+  background-color: var(--color-bg-tertiary);
+}
+.btn-success{
+  position: absolute;
+  right: 10px ;
+  bottom: 10px;
+}
+/* FOOTER END */
+@media (max-width: 768px) {
+  footer .col-md-6,
+  footer .col-12 {
+    text-align: center !important;
+  }
+}
