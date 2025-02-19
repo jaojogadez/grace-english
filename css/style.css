@@ -125,6 +125,35 @@ article .lh-sm {
   font-size: .9em;
 }
 /* ARTICLE END */
+/* BTN LOGIN START */
+.btn-info {
+  background-color: transparent;
+  border: 0;
+  margin: 1rem 0; 
+  color: var(--color-bg-secondary);
+  font-weight: light;
+  padding: 2rem;
+}
+.btn-info:hover {
+  background-color: transparent;
+  color: var(--color-text-hover);
+}
+.btn-info:active {
+  background-color: #cdcdcd7c !important;
+  scale: .9;
+}
+/* BTN LOGIN END*/
+/* FORM CONTACT START */
+#formContact {
+  background-color: var(--color-bg-contact-dark);
+  width: 100%;
+}
+/* FORM CONTACT END */
+@media (max-width: 1200px) {
+  .nav-link {
+    font-size: .9em !important;
+  }
+}
 @media (max-width: 768px) {
   footer .col-md-6,
   footer .col-12 {
