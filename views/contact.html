@@ -160,29 +160,31 @@
         class="row m-auto justify-content-center gx-5 p-0 mb-5"
       >
         <form class="row align-items-center text-dark p-5" id="formContact">
-          <div class="text-center">
+          <div class="text-center mb-5">
             <h1 class="display-6 fw-normal m-0">Deseja saber mais?</h1>
             <p class="display-6 fs-4">Deixe o seu contato</p>
           </div>
           <div class="container">
-            <div class="">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-4">
+            <div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-4 text-dark">
                     <div class="col">
-                      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                      <label for="name" class="form-label fs-5">Nome: </label>
+                      <input type="text" class="form-control" placeholder="Digite seu nome" id="name" aria-label="Digite seu nome">
                     </div>
                     <div class="col">
-                      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                      <label for="tel" class="form-label fs-5">Telefone: </label>
+                      <input type="text" class="form-control" placeholder="Digite seu telefone" id="tel" aria-label="Digite seu telefone">
                     </div>
                     <div class="col">
-                      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                      <label for="email" class="form-label fs-5">Email* : </label>
+                      <input type="text" class="form-control" placeholder="Digite seu email" id="email" aria-label="Digite seu telefone">
                     </div>
                 </div>
                 <div class="col p-1">
-                    <!-- <label for="floatingTextarea2">Comments</label> -->
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="message" class="form-label fs-5">Messagem: </label>
+                    <textarea class="form-control" placeholder="Digite aqui a sua mensagem" id="message" style="height: 100px"></textarea>
                 </div>
             </div>
-
           </div>
         </form>
       </section>
