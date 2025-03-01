@@ -13,11 +13,7 @@ const $inputResponsibleEmail = document.querySelector(
 );
 const $inputResponsibleTel = document.querySelector("#telResponsibleCadastre");
 const form = document.querySelector("#formCadastre");
-const ageGroup = document.querySelector('input[name="ageGroup"]:checked');
-const terms = document.querySelector('input[name="terms"]:checked');
-const radios = document.querySelectorAll('input[name="ageGroup"]');
-const radioselect = document.querySelector('input[name="ageGroup"]:checked');
-
+let isValidForm = false;
 
 form.onsubmit = (event) => {
   event.preventDefault();
@@ -25,9 +21,58 @@ form.onsubmit = (event) => {
 };
 
 let checkForm = () => {
-
-  const radios = document.querySelectorAll('input[name="ageGroup"]');
-  const radioselect = document.querySelector('input[name="ageGroup"]:checked');
-  console.log(radios);
-  console.log(radioselect.value);
+  checkRadiosInput();
+  checkTextInputs();
+  if (isValidForm) {
+    alert("Form enviado");
+    const cadastro = {
+      name: $inputStudentName.value,
+      dateBirth: {
+        day: $inputDayBirth.value,
+        month: $inputMonthBirth.value,
+        year: $inputYearBirth.value,
+      },
+      nameMother: $inputNameMother.value,
+      nameFather: $inputNameFather.value,
+      responsiblePersonName: $inputResponsibleName.value,
+      responsiblePersonCPF: $inputResponsibleCPF.value,
+      responsiblePersonEmail: $inputResponsibleEmail.value,
+      responsiblePersonPhone: $inputResponsibleTel.value,
+      ageGroup: document.querySelector('input[name="ageGroup"]:checked').value,
+      acceptTerms: document.querySelector('input[name="terms"]:checked').value,
+    };
+    console.log(cadastro)
+  } else {
+    newError("Por favor, prencha todos os campos obrigatórios");
+  }
 };
+
+let checkRadiosInput = () => {
+  const $ageGroupRadio = document.querySelector(
+    'input[name="ageGroup"]:checked'
+  );
+  const $termsRadio = document.querySelector('input[name="terms"]:checked');
+  if ($ageGroupRadio === null || $termsRadio === null) {
+    newError("Por favor, selecione ao menos uma opção.");
+  } else {
+    return (isValidForm = true);
+  }
+};
+
+let newError = (message) => {
+  const errorToast = new bootstrap.Toast(document.getElementById("liveToast"));
+  document.querySelector(".toast-body").textContent = message;
+  errorToast.show();
+};
+
+let checkTextInputs = () => {
+    const inputs = [$inputStudentName, $inputNameMother, $inputNameFather]
+    isValidForm = inputs.every((input) => input.value !== "")
+    inputs.map((input) => {
+        onlyLetters()
+    })
+}
+
+let onlyLetters = (input) => {
+    return input.replace(/[^A-Za-zÀ-ÿ\s]/gu, "")
+}
