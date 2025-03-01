@@ -196,18 +196,20 @@
                     aria-label="Day"
                   />
                   <!-- Month -->
-                  <input
-                    type="text"
-                    class="form-control col mx-3 d-none"
-                    placeholder="Month"
-                    id="monthBirthCadastre"
-                    aria-label="Month"
-                  />
-                  <select class="form-select col mx-3">
+                  <select class="form-select col mx-3" id="monthSelect">
                     <option selected disabled>Mounth</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="1">Janeiro</option>
+                    <option value="2">Fevereiro</option>
+                    <option value="3">Março</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Maio</option>
+                    <option value="6">Junho</option>
+                    <option value="7">Julho</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
                   </select>
                   
                   <!-- Year -->
@@ -316,6 +318,7 @@
                   type="radio"
                   name="ageGroup"
                   id="kids11-13y"
+                  value="kids11-13y"
                 />
                 <label class="form-label" for="kids11-13y">
                   11 a 13 anos
@@ -339,6 +342,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
+                  value="2"
                   name="terms"
                   id="yes"
                   required
@@ -351,6 +355,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
+                  value="1"
                   name="terms"
                   id="no"
                 />
@@ -410,7 +415,7 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script src="../script.js"></script>
+    <script src="../scripts/cadastre.js"></script>
     <script>
       (() => {
         "use strict";
