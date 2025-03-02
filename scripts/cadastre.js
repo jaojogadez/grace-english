@@ -49,7 +49,7 @@ let checkForm = () => {
 let validateEmail = (email) => {
   const regex = /\S+@\S+\.\S+/;
   email.addEventListener("input", () => {
-    isValidForm = regex.test(email.value);
+    return isValidForm = regex.test(email.value);
   });
 };
 
