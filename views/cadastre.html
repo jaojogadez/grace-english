@@ -175,7 +175,7 @@
                 <!-- Name student -->
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control stringTypeInput"
                   placeholder="Nome completo"
                   id="nameStudentCadastre"
                   aria-label="Nome completo"
@@ -184,20 +184,21 @@
               </div>
               <div class="col mb-4">
                 <label for="name" class="form-label fs-5"
-                  >Data de Nascimento do Aluno</label
+                  >Data de Nascimento do Aluno *</label
                 >
                 <div class="row px-3">
                   <!-- Day -->
                   <input
                     type="text"
-                    class="form-control col"
+                    class="form-control col numberTypeInput"
                     placeholder="Day"
                     id="dayBirthCadastre"
                     aria-label="Day"
+                    required
                   />
                   <!-- Month -->
-                  <select class="form-select col mx-3" id="monthSelect">
-                    <option selected disabled>Mounth</option>
+                  <select class="form-select col mx-3" id="monthSelect" required>
+                    <option selected disabled value="">Mounth</option>
                     <option value="1">Janeiro</option>
                     <option value="2">Fevereiro</option>
                     <option value="3">Março</option>
@@ -215,10 +216,11 @@
                   <!-- Year -->
                   <input
                     type="text"
-                    class="form-control col"
+                    class="form-control col numberTypeInput"
                     placeholder="Year"
                     id="yearBirthCadastre"
                     aria-label="Year"
+                    required
                   />
                 </div>
               </div>
@@ -227,7 +229,7 @@
                 <!-- Mother name -->
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control stringTypeInput"
                   id="nameMotherCadastre"
                   required
                 />
@@ -237,58 +239,62 @@
                 <!-- Father name -->
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control stringTypeInput"
                   id="nameFatherCadastre"
                   required
                 />
               </div>
               <div class="col mb-4">
                 <label for="name" class="form-label fs-5"
-                  >Nome do Responsável</label
+                  >Nome do Responsável *</label
                 >
                 <!-- Responsible name-->
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control stringTypeInput"
                   id="nameResponsibleCadastre"
+                  required
                 />
               </div>
               <div class="col mb-4">
                 <label for="name" class="form-label fs-5"
-                  >CPF do Responsável</label
+                  >CPF do Responsável *</label
                 >
                 <!-- CPF reponsible -->
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control numberTypeInput"
                   id="cpfResponsibleCadastre"
+                  required
                 />
               </div>
               <div class="col mb-4">
                 <label for="name" class="form-label fs-5"
-                  >Email do Responsável</label
+                  >Email do Responsável *</label
                 >
                 <!-- Email responsible -->
                 <input
                   type="email"
                   class="form-control"
                   id="emailResponsibleCadastre"
+                  required
                 />
               </div>
               <div class="col">
                 <label for="name" class="form-label fs-5"
-                  >Telefone do Responsável</label
+                  >Telefone do Responsável *</label
                 >
                 <!-- Tel responsible -->
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control numberTypeInput"
                   id="telResponsibleCadastre"
+                  required
                 />
               </div>
             </div>
             <div class="row px-3 mb-4">
-              <p class="p-0">Em que faixa etária o estudante se enquadra?</p>
+              <p class="p-0">Em que faixa etária o estudante se enquadra? *</p>
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -340,7 +346,7 @@
               </div>
             </div>
             <div class="row px-3">
-              <p class="p-0">Voce concorda que seja usado material cristão nas aulas como versos biblicos por exemplo? (A memorização de versos ajuda no desenvolvimento da lingua.)</p>
+              <p class="p-0">Voce concorda que seja usado material cristão nas aulas como versos biblicos por exemplo? (A memorização de versos ajuda no desenvolvimento da lingua.) *</p>
               <div class="form-check">
                 <input
                   class="form-check-input"
