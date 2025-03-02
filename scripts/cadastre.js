@@ -25,11 +25,8 @@ let checkForm = () => {
     // OBJECT WITH INPUTS VALUES
     const cadastro = {
       name: $inputStudentName.value,
-      dateBirth: {
-        day: $inputDayBirth.value,
-        month: $inputMonthBirth.value,
-        year: $inputYearBirth.value,
-      },
+      dateBirth: dateBirth($inputDayBirth, $inputMonthBirth, $inputYearBirth),
+      age: new Date().getFullYear() - (Number.parseInt($inputYearBirth.value)),
       nameMother: $inputNameMother.value,
       nameFather: $inputNameFather.value,
       responsiblePersonName: $inputResponsibleName.value,
@@ -38,6 +35,8 @@ let checkForm = () => {
       responsiblePersonPhone: $inputResponsibleTel.value,
       ageGroup: document.querySelector('input[name="ageGroup"]:checked').value,
       acceptTerms: document.querySelector('input[name="terms"]:checked').value,
+      dateCadastre: new Date().toLocaleDateString(),
+      id: new Date().getTime(),
     };
     console.log(cadastro); // SIMULATE SUBMIT FORM
   } else {
@@ -78,10 +77,19 @@ let newError = (message) => {
   errorToast.show();
 };
 
+// FORMAT BIRTH DAY 
+let dateBirth = (day, month, year) => {
+  dayValue = day.value.toString().padStart(2, "0")
+  monthValue = month.value.toString().padStart(2, "0")
+  yearValue = year.value
+  formatedDateBirth = `${dayValue}/${monthValue}/${yearValue}` // 00/00/0000
+  return formatedDateBirth;
+}
+
 // CHECK ALL INPUTS IS NOT EMPTY
 let checkTextInputs = () => {
   const inputs = [$inputStudentName, $inputNameFather, $inputNameMother];
-  isValidForm = inputs.every((input) => input.value !== "");
+  return isValidForm = inputs.every((input) => input.value !== "");
 };
 
 // REGEX FOR ALL INPUTS TYPEOF TEXT
@@ -109,12 +117,13 @@ let onlyNumbers = (value) => {
 };
 
 // DEFINE MAX LENGHT FOR DATE INPUTS
-const dateInputs = [$inputDayBirth, $inputYearBirth];
-dateInputs.forEach((input) => {
-  input.addEventListener("input", () => {
-    input.value = input.value.slice(0, 2);
-  });
-});
+$inputDayBirth.oninput = () => {
+  $inputDayBirth.value = $inputDayBirth.value.slice(0, 2)
+}
+$inputYearBirth.oninput = () => {
+  $inputYearBirth.value = $inputYearBirth.value.slice(0, 4)
+}
+
 
 // SUBMIT FORM
 form.onsubmit = (event) => {
