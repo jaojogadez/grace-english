@@ -203,6 +203,12 @@ article .lh-sm {
   footer .col-12 {
     text-align: center !important;
   }
+  .row.flex-column {
+    display: none;
+  }
+  #formContainer{
+    width: 100%;
+  }
 }
 @media (max-width: 560px) {
   .col-md-11 {
