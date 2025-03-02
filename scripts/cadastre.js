@@ -20,10 +20,8 @@ let isValidForm = false; // CONTROL ERRORS
 
 // CHECK INPUTS FORM
 let checkForm = () => {
-  checkRadiosInput();
   checkTextInputs();
   if (isValidForm) {
-    alert("Form enviado"); // FOR VIEW
     // OBJECT WITH INPUTS VALUES
     const cadastro = {
       name: $inputStudentName.value,
@@ -41,21 +39,37 @@ let checkForm = () => {
       ageGroup: document.querySelector('input[name="ageGroup"]:checked').value,
       acceptTerms: document.querySelector('input[name="terms"]:checked').value,
     };
+    console.log(cadastro); // SIMULATE SUBMIT FORM
   } else {
     newError("Por favor, prencha todos os campos obrigatórios");
   }
 };
 
-// CHECK RADIO INPUTS WAS CHECKED
-let checkRadiosInput = () => {
-  const $ageGroupRadio = document.querySelector(
-    'input[name="ageGroup"]:checked'
-  );
-  const $termsRadio = document.querySelector('input[name="terms"]:checked');
-  if ($ageGroupRadio !== null || $termsRadio !== null) {
-    return (isValidForm = true);
-  }
+// CHECK EMAIL INPUT
+let validateEmail = (email) => {
+  const regex = /\S+@\S+\.\S+/;
+  email.addEventListener("input", () => {
+    isValidForm = regex.test(email.value);
+  });
 };
+
+// CHECK CPF INPUT
+let validateCpf = (cpf) => {
+  cpf.addEventListener("input", () => {
+    cpf.value = cpf.value.slice(0, 11).replace(/(\d{3})(\d)/, "$1.$2").replace(/(\d{3})(\d)/, "$1.$2").replace(/(\d{3})(\d{2})$/, "$1-$2")
+  });
+};
+
+// CHECK TEL INPUT
+let validatePhone = (phone) => {
+  phone.addEventListener("input", () => {
+    phone.value = phone.value.slice(0, 11).replace(/^(\d{2})(\d)/, "($1) $2").replace(/(\d{5})(\d)/, "$1 $2")
+  });
+};
+
+validateEmail($inputResponsibleEmail);
+validateCpf($inputResponsibleCPF);
+validatePhone($inputResponsibleTel)
 
 // CREATE A BOOTSTRAP TOAST FOR INVALID INPUTS
 let newError = (message) => {
@@ -66,8 +80,8 @@ let newError = (message) => {
 
 // CHECK ALL INPUTS IS NOT EMPTY
 let checkTextInputs = () => {
-  const inputs = document.querySelectorAll("input");
-  isValidForm = Array.from(inputs).every((input) => input.value !== "");
+  const inputs = [$inputStudentName, $inputNameFather, $inputNameMother];
+  isValidForm = inputs.every((input) => input.value !== "");
 };
 
 // REGEX FOR ALL INPUTS TYPEOF TEXT
@@ -94,11 +108,13 @@ let onlyNumbers = (value) => {
   return value.replace(/\D/g, "");
 };
 
-// REGEX FOR EMAIL INPUT
-let validateEmail = (email) => {
-  const regex = /\S+@\S+\.\S+/;
-  return regex.test(email)
-};
+// DEFINE MAX LENGHT FOR DATE INPUTS
+const dateInputs = [$inputDayBirth, $inputYearBirth];
+dateInputs.forEach((input) => {
+  input.addEventListener("input", () => {
+    input.value = input.value.slice(0, 2);
+  });
+});
 
 // SUBMIT FORM
 form.onsubmit = (event) => {

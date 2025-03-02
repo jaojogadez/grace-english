@@ -181,10 +181,16 @@
                   aria-label="Nome completo"
                   required
                 />
+                <div class="valid-feedback">
+                  Parece bom!
+                </div>
+                <div class="invalid-feedback">
+                  Esse campo é obrigatório.
+                </div>
               </div>
               <div class="col mb-4">
                 <label for="name" class="form-label fs-5"
-                  >Data de Nascimento do Aluno *</label
+                  >Data de Nascimento do Aluno</label
                 >
                 <div class="row px-3">
                   <!-- Day -->
@@ -194,10 +200,9 @@
                     placeholder="Day"
                     id="dayBirthCadastre"
                     aria-label="Day"
-                    required
                   />
                   <!-- Month -->
-                  <select class="form-select col mx-3" id="monthSelect" required>
+                  <select class="form-select col mx-3" id="monthSelect">
                     <option selected disabled value="">Mounth</option>
                     <option value="1">Janeiro</option>
                     <option value="2">Fevereiro</option>
@@ -220,7 +225,6 @@
                     placeholder="Year"
                     id="yearBirthCadastre"
                     aria-label="Year"
-                    required
                   />
                 </div>
               </div>
@@ -231,8 +235,15 @@
                   type="text"
                   class="form-control stringTypeInput"
                   id="nameMotherCadastre"
+                  placeholder="Nome completo"
                   required
                 />
+                <div class="valid-feedback">
+                  Parece bom!
+                </div>
+                <div class="invalid-feedback">
+                  Esse campo é obrigatório.
+                </div>
               </div>
               <div class="col mb-4">
                 <label for="name" class="form-label fs-5">Nome do Pai *</label>
@@ -241,60 +252,64 @@
                   type="text"
                   class="form-control stringTypeInput"
                   id="nameFatherCadastre"
+                  placeholder="Nome completo"
                   required
                 />
+                <div class="valid-feedback">
+                  Parece bom!
+                </div>
+                <div class="invalid-feedback">
+                  Esse campo é obrigatório.
+                </div>
               </div>
               <div class="col mb-4">
                 <label for="name" class="form-label fs-5"
-                  >Nome do Responsável *</label
+                  >Nome do Responsável</label
                 >
                 <!-- Responsible name-->
                 <input
                   type="text"
                   class="form-control stringTypeInput"
                   id="nameResponsibleCadastre"
-                  required
                 />
               </div>
               <div class="col mb-4">
                 <label for="name" class="form-label fs-5"
-                  >CPF do Responsável *</label
+                  >CPF do Responsável</label
                 >
                 <!-- CPF reponsible -->
                 <input
                   type="text"
                   class="form-control numberTypeInput"
                   id="cpfResponsibleCadastre"
-                  required
                 />
               </div>
               <div class="col mb-4">
                 <label for="name" class="form-label fs-5"
-                  >Email do Responsável *</label
+                  >Email do Responsável</label
                 >
                 <!-- Email responsible -->
                 <input
                   type="email"
                   class="form-control"
                   id="emailResponsibleCadastre"
-                  required
                 />
               </div>
               <div class="col">
                 <label for="name" class="form-label fs-5"
-                  >Telefone do Responsável *</label
+                  >Telefone do Responsável</label
                 >
                 <!-- Tel responsible -->
                 <input
                   type="text"
                   class="form-control numberTypeInput"
                   id="telResponsibleCadastre"
-                  required
                 />
               </div>
             </div>
             <div class="row px-3 mb-4">
               <p class="p-0">Em que faixa etária o estudante se enquadra? *</p>
+              
               <div class="form-check">
                 <input
                   class="form-check-input"
@@ -343,6 +358,12 @@
                 <label class="form-label" for="14yorMore">
                   Acima de 14 anos
                 </label>
+                <div class="valid-feedback">
+                  Parece bom!
+                </div>
+                <div class="invalid-feedback">
+                  Por favor, escolha uma opção.
+                </div>
               </div>
             </div>
             <div class="row px-3">
@@ -371,6 +392,12 @@
                 <label class="form-label" for="no">
                   Não
                 </label>
+                <div class="valid-feedback">
+                  Parece bom!
+                </div>
+                <div class="invalid-feedback">
+                  Por favor, escolha uma opção.
+                </div>
               </div>
             </div>
             <div class="d-flex justify-content-center">

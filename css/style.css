@@ -188,6 +188,10 @@ article .lh-sm {
 .form-select:hover {
   cursor: pointer;
 }
+.invalid-feedback,
+.valid-feedback {
+  font-size: .65em;
+}
 /* FORM CADASTRE END */
 @media (max-width: 1200px) {
   .nav-link {
