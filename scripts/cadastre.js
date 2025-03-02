@@ -39,6 +39,7 @@ let checkForm = () => {
       id: new Date().getTime(),
     };
     console.log(cadastro); // SIMULATE SUBMIT FORM
+    document.querySelector("#submitForm").classList.remove("d-none");
   } else {
     newError("Por favor, prencha todos os campos obrigatórios");
   }
@@ -122,6 +123,10 @@ $inputDayBirth.oninput = () => {
 }
 $inputYearBirth.oninput = () => {
   $inputYearBirth.value = $inputYearBirth.value.slice(0, 4)
+}
+
+let clearInputs = () => {
+  Array.from(document.querySelectorAll("input")).map((input) => input.value = "")
 }
 
 

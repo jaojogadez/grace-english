@@ -58,7 +58,9 @@
               <a class="nav-link" href="cursos.html">Cursos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="student-area.html">Área do Aluno</a>
+              <a class="nav-link active" href="student-area.html"
+                >Área do Aluno</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contato</a>
@@ -162,13 +164,151 @@
         <article
           class="row row-cols-1 row-cols-sm-2 row-cols-md-2 shadow justify-content-center text-dark px-5"
         >
-          <img src="../images/login-image.png" alt="Girl studing photo." class="img-fluid rounded-5">
+          <img
+            src="../images/login-image.png"
+            alt="Girl studing photo."
+            class="img-fluid rounded-5"
+          />
           <div class="col d-flex align-items-center justify-content-center">
-            <button type="submit" class="btn btn-info btn-lg px-5"><i class="bi bi-person-circle"></i> Log In</button>
-          </div> 
+            <button
+              type="submit"
+              class="btn btn-info btn-lg px-5"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <i class="bi bi-person-circle"></i> Log In
+            </button>
+          </div>
         </article>
       </section>
     </main>
+
+    <!-- MODAL LOGIN -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <!-- LOG IN -->
+          <div class="modal-body" id="login">
+            <h2>Log In</h2>
+            <p>
+              New to this site?
+              <a href="#paracadastro" id="signUpBtn">Sign Up</a>
+            </p>
+            <form
+              novalidate
+              class="container col-7 needs-validation"
+              method="post"
+            >
+              <div class="mb-4">
+                <label for="email" class="form-label">Email: </label>
+                <input
+                  type="email"
+                  name="email-login"
+                  id="email-login"
+                  class="form-control"
+                  required
+                />
+                <div class="valid-feedback">Email válido!</div>
+                <div class="invalid-feedback">Esse campo é obrigatório.</div>
+              </div>
+              <div class="mb-4">
+                <label for="password" class="form-label">Senha: </label>
+                <input
+                  type="password"
+                  name="password-login"
+                  id="password-login"
+                  class="form-control"
+                  required
+                />
+                <div class="valid-feedback">Senha válida!</div>
+                <div class="invalid-feedback">Esse campo é obrigatório.</div>
+              </div>
+              <div class="mb-3">
+                <a href="">Esqueceu a senha?</a>
+              </div>
+              <input
+                type="submit"
+                value="Log In"
+                class="btn btn-lg btn-primary w-100"
+              />
+            </form>
+          </div>
+
+          <!-- SING UP -->
+          <div class="modal-body" id="singup">
+            <h2>Sign Up</h2>
+            <p>
+              Already a member? <a href="#paralogin" id="signUpBtn">Log In</a>
+            </p>
+            <form
+              novalidate
+              class="container col-7 needs-validation"
+              method="post"
+            >
+              <div class="mb-4">
+                <label for="email" class="form-label">Email: </label>
+                <input
+                  type="email"
+                  name="email-signup"
+                  id="email-signup"
+                  class="form-control"
+                  required
+                />
+                <div class="valid-feedback">Email válido!</div>
+                <div class="invalid-feedback">Esse campo é obrigatório.</div>
+              </div>
+              <div class="mb-4">
+                <label for="password" class="form-label">Senha: </label>
+                <input
+                  type="password"
+                  name="password-singup"
+                  id="password-singup"
+                  class="form-control"
+                  required
+                />
+                <div class="valid-feedback">Senha válida!</div>
+                <div class="invalid-feedback">Esse campo é obrigatório.</div>
+              </div>
+              <div class="mb-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Sign up to this site with a public profile. <strong class="text-decoration-underline" style="cursor: pointer;">Read More</strong>
+                </label>
+                <p class="d-none text-center mt-3 border p-2 rounded-3">
+                  Your profile will be set to public automatically when you sign up. You can change this later in your profile settings.
+                </p>
+              </div>
+              <input
+                type="submit"
+                value="Log In"
+                class="btn btn-lg btn-primary w-100"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer
       class="container-fluid d-flex flex-column justify-content-center p-0"
@@ -209,5 +349,26 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script>
+      (() => {
+        "use strict";
+        const forms = document.querySelectorAll(".needs-validation");
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+    <script src="../scripts/login.js"></script>
   </body>
 </html>

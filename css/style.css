@@ -146,7 +146,7 @@ article .lh-sm {
 /* BTN LOGIN END*/
 /* FORM CONTACT START */
 #formContact {
-  background-color: var(--color-bg-contact-dark);
+  background: linear-gradient(var(--bg-gradient-form));
   width: 100%;
 }
 .btn-primary {
@@ -160,7 +160,8 @@ article .lh-sm {
   background-color: var(--color-bg-secondary) !important;
 }
 .form-control:focus, 
-.form-select:focus {
+.form-select:focus,
+.form-control-lg:focus {
   box-shadow: none;
   border: 2px solid var(--color-bg-tertiary);
 }
@@ -192,7 +193,26 @@ article .lh-sm {
 .valid-feedback {
   font-size: .65em;
 }
+#submitForm {
+  color: var(--color-text-form);
+  margin-bottom: 1rem;
+}
 /* FORM CADASTRE END */
+/* MODAL START */
+.modal-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-body a {
+  color: var(--color-bg-tertiary);
+}
+.modal-body .form-label {
+  font-size: 1.3em !important;
+  color: #222;
+}
+/* MODAL END */
 @media (max-width: 1200px) {
   .nav-link {
     font-size: .9em !important;
@@ -217,8 +237,8 @@ article .lh-sm {
     text-align: center;
   }
 }
-#root .row {
-  animation: appear 500ms ease-in-out;
+main {
+  animation: appear 700ms ease-in-out;
 }
 @keyframes appear {
   from {
@@ -226,5 +246,69 @@ article .lh-sm {
   }
   to {
     opacity: 1;
+  }
+}
+
+/* Efeito ao clicar no botão ( Ir para Login ) */
+#paracadastro:target ~ .content #cadastro,
+#paralogin:target ~ .content #login{
+  z-index: 2;
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+ 
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+}
+ 
+/* Efeito ao clicar no botão ( Cadastre-se ) */
+#registro:target ~ .content #login,
+#paralogin:target ~ .content #cadastro{
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+/*fadeInLeft*/
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+ 
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+ 
+/*fadeOutLeft*/
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+}
+ 
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
   }
 }
