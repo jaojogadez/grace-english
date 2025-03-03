@@ -26,22 +26,50 @@ let checkForm = () => {
     const cadastro = {
       name: $inputStudentName.value,
       dateBirth: dateBirth($inputDayBirth, $inputMonthBirth, $inputYearBirth),
-      age: new Date().getFullYear() - (Number.parseInt($inputYearBirth.value)),
+      age: new Date().getFullYear() - Number.parseInt($inputYearBirth.value),
       nameMother: $inputNameMother.value,
       nameFather: $inputNameFather.value,
       responsiblePersonName: $inputResponsibleName.value,
       responsiblePersonCPF: $inputResponsibleCPF.value,
       responsiblePersonEmail: $inputResponsibleEmail.value,
       responsiblePersonPhone: $inputResponsibleTel.value,
-      ageGroup: document.querySelector('input[name="ageGroup"]:checked').value,
-      acceptTerms: document.querySelector('input[name="terms"]:checked').value,
+      ageGroup: validateRadio("ageGroup"),
+      acceptTerms: validateRadio("terms"),
       dateCadastre: new Date().toLocaleDateString(),
-      id: new Date().getTime(),
+      id: Number.parseInt(Math.random()),
     };
     console.log(cadastro); // SIMULATE SUBMIT FORM
-    document.querySelector("#submitForm").classList.remove("d-none");
+
+    document.querySelector("#submitForm .spinner-border").classList.remove("d-none");
+    form.reset();
+    
+    setTimeout(() => {
+      form.classList.remove("was-validated"); 
+      document.querySelector("#submitForm .spinner-border").classList.add("d-none");
+    }, 2000);
+    
+
+    setTimeout(() => {
+      document.querySelector("#submitForm .fst-italic").classList.remove("d-none");
+    }, 2000);
+
+    setTimeout(() => {
+      document.querySelector("#submitForm .fst-italic").classList.add("d-none");
+    }, 5000);
+
+
   } else {
     newError("Por favor, prencha todos os campos obrigatórios");
+  }
+};
+
+// CHECK RADIO INPUTS
+let validateRadio = (name) => {
+  let valueRadio = document.querySelector(`input[name="${name}"]:checked`);
+  if (valueRadio) {
+    return valueRadio.value;
+  } else {
+    return null;
   }
 };
 
@@ -49,27 +77,34 @@ let checkForm = () => {
 let validateEmail = (email) => {
   const regex = /\S+@\S+\.\S+/;
   email.addEventListener("input", () => {
-    return isValidForm = regex.test(email.value);
+    return (isValidForm = regex.test(email.value));
   });
 };
 
 // CHECK CPF INPUT
 let validateCpf = (cpf) => {
   cpf.addEventListener("input", () => {
-    cpf.value = cpf.value.slice(0, 11).replace(/(\d{3})(\d)/, "$1.$2").replace(/(\d{3})(\d)/, "$1.$2").replace(/(\d{3})(\d{2})$/, "$1-$2")
+    cpf.value = cpf.value
+      .slice(0, 11)
+      .replace(/(\d{3})(\d)/, "$1.$2")
+      .replace(/(\d{3})(\d)/, "$1.$2")
+      .replace(/(\d{3})(\d{2})$/, "$1-$2");
   });
 };
 
 // CHECK TEL INPUT
 let validatePhone = (phone) => {
   phone.addEventListener("input", () => {
-    phone.value = phone.value.slice(0, 11).replace(/^(\d{2})(\d)/, "($1) $2").replace(/(\d{5})(\d)/, "$1 $2")
+    phone.value = phone.value
+      .slice(0, 11)
+      .replace(/^(\d{2})(\d)/, "($1) $2")
+      .replace(/(\d{5})(\d)/, "$1 $2");
   });
 };
 
 validateEmail($inputResponsibleEmail);
 validateCpf($inputResponsibleCPF);
-validatePhone($inputResponsibleTel)
+validatePhone($inputResponsibleTel);
 
 // CREATE A BOOTSTRAP TOAST FOR INVALID INPUTS
 let newError = (message) => {
@@ -78,19 +113,19 @@ let newError = (message) => {
   errorToast.show();
 };
 
-// FORMAT BIRTH DAY 
+// FORMAT BIRTH DAY
 let dateBirth = (day, month, year) => {
-  dayValue = day.value.toString().padStart(2, "0")
-  monthValue = month.value.toString().padStart(2, "0")
-  yearValue = year.value
-  formatedDateBirth = `${dayValue}/${monthValue}/${yearValue}` // 00/00/0000
+  dayValue = day.value.toString().padStart(2, "0");
+  monthValue = month.value.toString().padStart(2, "0");
+  yearValue = year.value;
+  formatedDateBirth = `${dayValue}/${monthValue}/${yearValue}`; // 00/00/0000
   return formatedDateBirth;
-}
+};
 
 // CHECK ALL INPUTS IS NOT EMPTY
 let checkTextInputs = () => {
   const inputs = [$inputStudentName, $inputNameFather, $inputNameMother];
-  return isValidForm = inputs.every((input) => input.value !== "");
+  return (isValidForm = inputs.every((input) => input.value !== ""));
 };
 
 // REGEX FOR ALL INPUTS TYPEOF TEXT
@@ -119,16 +154,17 @@ let onlyNumbers = (value) => {
 
 // DEFINE MAX LENGHT FOR DATE INPUTS
 $inputDayBirth.oninput = () => {
-  $inputDayBirth.value = $inputDayBirth.value.slice(0, 2)
-}
+  $inputDayBirth.value = $inputDayBirth.value.slice(0, 2);
+};
 $inputYearBirth.oninput = () => {
-  $inputYearBirth.value = $inputYearBirth.value.slice(0, 4)
-}
+  $inputYearBirth.value = $inputYearBirth.value.slice(0, 4);
+};
 
 let clearInputs = () => {
-  Array.from(document.querySelectorAll("input")).map((input) => input.value = "")
-}
-
+  Array.from(document.querySelectorAll("input")).map(
+    (input) => (input.value = "")
+  );
+};
 
 // SUBMIT FORM
 form.onsubmit = (event) => {

@@ -338,7 +338,6 @@
                   name="ageGroup"
                   value="kids5-6y"
                   id="kids5-6y"
-                  required
                 />
                 <label class="form-label" for="kids5-6y"> 5 a 6 anos </label>
               </div>
@@ -394,7 +393,6 @@
                   value="yes"
                   name="terms"
                   id="yes"
-                  required
                 />
                 <label class="form-label" for="yes"> Sim </label>
               </div>
@@ -420,8 +418,11 @@
                 class="btn btn-primary w-100"
               />
             </div>
-            <div class="text-center d-none" id="submitForm">
-              <span class="fst-italic fs-5">Obrigado. Recebemos seu formulário!</span>
+            <div class="text-center" id="submitForm">
+              <span class="fst-italic fs-5 d-none">Obrigado. Recebemos seu formulário!</span>
+              <div class="spinner-border d-none" role="status">
+                <span class="visually-hidden ">Loading...</span>
+              </div>
             </div>
           </div>
         </form>

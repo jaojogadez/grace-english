@@ -12,7 +12,7 @@
   --color-text-form: #4940cd;
   --color-bg-contact-light: #6482d6;
   --color-bg-contact-dark: #88b4f7;
-  --color-bg-cadastre: #EEEDFE;
+  --color-bg-cadastre: #eeedfe;
   /* Gradiente */
   --bg-gradient: #0d0a87, #500195, #7501d9;
   --bg-gradient-form: #6482d6, #88b4f7;
@@ -105,7 +105,7 @@ footer .col-12 {
   right: 10px;
   bottom: 10px;
 }
-.col-{
+.col- {
   /* margin: 1rem 3rem; */
   display: flex;
   flex-direction: column;
@@ -123,14 +123,14 @@ article .lh-base {
 }
 article .lh-sm {
   text-align: justify;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 /* ARTICLE END */
 /* BTN LOGIN START */
 .btn-info {
   background-color: transparent;
   border: 0;
-  margin: 1rem 0; 
+  margin: 1rem 0;
   color: var(--color-bg-secondary);
   font-weight: light;
   padding: 2rem;
@@ -141,7 +141,7 @@ article .lh-sm {
 }
 .btn-info:active {
   background-color: #cdcdcd7c !important;
-  scale: .9;
+  scale: 0.9;
 }
 /* BTN LOGIN END*/
 /* FORM CONTACT START */
@@ -159,7 +159,7 @@ article .lh-sm {
 .btn-primary:active {
   background-color: var(--color-bg-secondary) !important;
 }
-.form-control:focus, 
+.form-control:focus,
 .form-select:focus,
 .form-control-lg:focus {
   box-shadow: none;
@@ -171,19 +171,18 @@ article .lh-sm {
   background-color: var(--color-bg-cadastre);
   border-radius: 15px;
 }
-#formCadastre h1, 
+#formCadastre h1,
 .form-label,
-#formCadastre p{
+#formCadastre p {
   color: var(--color-text-form);
 }
 .form-label,
 #formCadastre p {
-  font-size: .6em !important;
+  font-size: 0.6em !important;
 }
+.form-label,
+.form-check-label,
 .form-check-input {
-  font-size: .8em;
-}
-.form-label {
   cursor: pointer;
 }
 .form-select:hover {
@@ -191,7 +190,7 @@ article .lh-sm {
 }
 .invalid-feedback,
 .valid-feedback {
-  font-size: .65em;
+  font-size: 0.65em;
 }
 #submitForm {
   color: var(--color-text-form);
@@ -207,30 +206,6 @@ article .lh-sm {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* position: absolute; */
-  transform: scale(0.9);
-  opacity: 0;
-  transition: opacity 300ms ease, transform 300ms ease;
-}
-#login {
-  opacity: 1;
-  transform: scale(1);
-}
-#login:target {
-  opacity: 1;
-  transform: scale(1);
-}
-#singup:target {
-  opacity: 1;
-  transform: scale(1);
-}
-#login:target ~ #singup {
-  opacity: 0;
-  transform: scale(0.9);
-}
-#singup:target ~ #login {
-  opacity: 0;
-  transform: scale(0.9);
 }
 .modal-body a {
   color: var(--color-bg-tertiary);
@@ -242,7 +217,7 @@ article .lh-sm {
 /* MODAL END */
 @media (max-width: 1200px) {
   .nav-link {
-    font-size: .9em !important;
+    font-size: 0.9em !important;
   }
 }
 @media (max-width: 768px) {
@@ -253,7 +228,7 @@ article .lh-sm {
   .row.flex-column {
     display: none;
   }
-  #formContainer{
+  #formContainer {
     width: 100%;
   }
 }
@@ -276,36 +251,14 @@ main {
   }
 }
 
-/* Efeito ao clicar no botão ( Ir para Login ) */
-#paracadastro:target ~ .content #cadastro,
-#paralogin:target ~ .content #login{
-  z-index: 2;
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
- 
-  -webkit-animation-delay: .1s;
-  animation-delay: .1s;
-}
- 
-/* Efeito ao clicar no botão ( Cadastre-se ) */
-#registro:target ~ .content #login,
-#paralogin:target ~ .content #cadastro{
-  -webkit-animation-name: fadeOutLeft;
-  animation-name: fadeOutLeft;
+.fade-in {
+  animation: fadeInLeft 300ms forwards;
 }
 
-/*fadeInLeft*/
-@-webkit-keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-20px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
+.fade-out {
+  animation: fadeOutLeft 300ms forwards;
 }
- 
+
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
@@ -316,19 +269,7 @@ main {
     transform: translateX(0);
   }
 }
- 
-/*fadeOutLeft*/
-@-webkit-keyframes fadeOutLeft {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateX(-20px);
-  }
-}
- 
+
 @keyframes fadeOutLeft {
   0% {
     opacity: 1;
