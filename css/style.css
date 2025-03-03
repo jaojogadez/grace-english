@@ -198,9 +198,6 @@ article .lh-sm {
 }
 /* FORM CADASTRE END */
 /* MODAL START */
-.modal-content {
-  /* position: relative; */
-}
 .modal-body {
   display: flex;
   justify-content: center;
