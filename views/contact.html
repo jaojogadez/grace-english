@@ -158,7 +158,7 @@
     <main class="container-fluid col-md-9">
       <section class="row m-auto justify-content-center gx-5 p-0 mb-5">
         <form
-          class="row align-items-center text-dark p-5 needs-validation"
+          class="row align-items-center text-dark p-5 needs-validation position-relative"
           id="formContact"
           method="post"
           novalidate
@@ -167,7 +167,7 @@
             <h1 class="display-6 fw-normal m-0">Deseja saber mais?</h1>
             <p class="display-6 fs-4">Deixe o seu contato</p>
           </div>
-          <div class="container">
+          <div class="container" style="margin-bottom: 5.5rem;">
             <div>
               <div
                 class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-4 text-dark"
@@ -218,11 +218,12 @@
                   style="height: 100px"
                 ></textarea>
               </div>
-              <div class="d-flex justify-content-end">
+              <div class="d-flex justify-content-end mb-5" id="container-btn-submit">
                 <input type="submit" value="Enviar" class="btn btn-primary" />
               </div>
             </div>
           </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" id="waves"><path fill="#f3f4f5" fill-opacity="1" d="M0,160L13.3,149.3C26.7,139,53,117,80,96C106.7,75,133,53,160,58.7C186.7,64,213,96,240,117.3C266.7,139,293,149,320,160C346.7,171,373,181,400,208C426.7,235,453,277,480,266.7C506.7,256,533,192,560,181.3C586.7,171,613,213,640,192C666.7,171,693,85,720,74.7C746.7,64,773,128,800,154.7C826.7,181,853,171,880,160C906.7,149,933,139,960,160C986.7,181,1013,235,1040,261.3C1066.7,288,1093,288,1120,282.7C1146.7,277,1173,267,1200,240C1226.7,213,1253,171,1280,165.3C1306.7,160,1333,192,1360,192C1386.7,192,1413,160,1427,144L1440,128L1440,320L1426.7,320C1413.3,320,1387,320,1360,320C1333.3,320,1307,320,1280,320C1253.3,320,1227,320,1200,320C1173.3,320,1147,320,1120,320C1093.3,320,1067,320,1040,320C1013.3,320,987,320,960,320C933.3,320,907,320,880,320C853.3,320,827,320,800,320C773.3,320,747,320,720,320C693.3,320,667,320,640,320C613.3,320,587,320,560,320C533.3,320,507,320,480,320C453.3,320,427,320,400,320C373.3,320,347,320,320,320C293.3,320,267,320,240,320C213.3,320,187,320,160,320C133.3,320,107,320,80,320C53.3,320,27,320,13,320L0,320Z"></path></svg>
         </form>
       </section>
     </main>

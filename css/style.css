@@ -90,6 +90,28 @@ nav .navbar-collapse {
   transition: all 300ms ease-in-out;
   cursor: pointer;
 }
+#online-classes{
+  font-size: 1.3em;
+  font-weight: 900; 
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 30%;
+  right: 0;
+  background: linear-gradient(45deg, #FFA500, #FF4500, #FFA500);
+  background-size: 400% 100%;
+  animation: degrade 10s linear infinite alternate;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes degrade {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 400%;
+  }
+}
 /* HOME END */
 /* FOOTER START */
 footer {
@@ -165,6 +187,14 @@ article .lh-sm {
   box-shadow: none;
   border: 2px solid var(--color-bg-tertiary);
 }
+#waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 5rem !important;
+  scale: 1.02;
+}
 /* FORM CONTACT END */
 /* FORM CADASTRE START */
 #formCadastre {
@@ -227,6 +257,12 @@ article .lh-sm {
   }
   #formContainer {
     width: 100%;
+  }
+  #container-btn-submit {
+    justify-content: center !important;
+  }
+  #container-btn-submit input {
+    width: 97%;
   }
 }
 @media (max-width: 560px) {

@@ -109,12 +109,16 @@
 
     <main class="container-fluid col-md-9">
       <section class="row container align-items-center m-auto gx-5 mb-5">
-        <div class="col-md-6 order-lg-2">
+        <div class="col-md-6 order-lg-2 position-relative">
           <img
             src="../images/home/home-person.png"
             alt="English teacher image"
             class="img-fluid"
+            style="transition: all ease-in-out;"
           />
+          <p contenteditable="true" id="online-classes">
+            Online <br> Classes
+          </p>
         </div>
         <div class="col-md-6">
           <!-- <h1>Seja bem-vindo à Grace English</h1> -->
@@ -132,6 +136,7 @@
             src="../images/home/home-girl.png"
             alt="English student image"
             class="img-fluid rounded-circle"
+            id="home-girl"
           />
         </div>
         <div class="col-md-6">
@@ -177,5 +182,14 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const img = document.querySelector("#home-girl");
+      img.addEventListener("mouseover", () => {
+        img.setAttribute("src", "../images/home/home-image.png")
+      })
+      img.addEventListener("mouseout", () => {
+        img.setAttribute("src", "../images/home/home-girl.png")
+      })
+    </script>
   </body>
 </html>
