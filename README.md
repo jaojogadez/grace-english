@@ -7,7 +7,7 @@ Uma landing page moderna para uma escola de inglês.
 
 🔗 Acesse o projeto: [https://jaojogadez.github.io/grace-english/views/home.html]
 
-## ✨ Recursos
+## ✨ Recursos nesta versão
 
 * 🚫 Formulários com validação e feedback.
 * 📱 Design responsivo para diferentes tamanhos de tela.
