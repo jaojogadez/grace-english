@@ -22,7 +22,7 @@ Uma landing page moderna para uma escola de inglês.
 
 * 🌐 Um navegador web (Chrome, Firefox, Safari, etc.)
 
-## ⚠️ Atenção - Projeto em Desenvolvimento...
+# ⚠️ Atenção - Projeto em Desenvolvimento...
 Para qualquer dúvida ou problema, entre em contato via GitHub: [@jaojogadez](https://github.com/jaojogadez).
 <!--
 ## 📜 Licença
