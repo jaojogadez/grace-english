@@ -1,6 +1,6 @@
 # Grace English
 
-Uma landing page para uma escola de inglês
+Uma landing page moderna para uma escola de inglês.
 
 ![Template Projeto (3)](https://github.com/user-attachments/assets/228c13ca-dfe4-4134-8b67-e9d2d2ad7217)
 
