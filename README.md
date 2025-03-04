@@ -2,7 +2,8 @@
 
 Uma landing page para uma escola de inglês
 
-![Template Projeto (1)](https://github.com/user-attachments/assets/5b8e3323-4317-4d29-aca0-a04728646fd5)
+![Template Projeto (3)](https://github.com/user-attachments/assets/228c13ca-dfe4-4134-8b67-e9d2d2ad7217)
+
 
 🔗 Acesse o projeto: [https://jaojogadez.github.io/grace-english/views/home.html]
 
@@ -22,7 +23,7 @@ Uma landing page para uma escola de inglês
 * 🌐 Um navegador web (Chrome, Firefox, Safari, etc.)
 
 ## ⚠️ Atenção - Projeto em Desenvolvimento...
-
+Para qualquer dúvida ou problema, entre em contato via GitHub: [@jaojogadez](https://github.com/jaojogadez).
 <!--
 ## 📜 Licença
 
@@ -30,5 +31,5 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 ## 📩 Contato/Suporte
 
-Para qualquer dúvida ou problema, entre em contato via GitHub: [@jaojogadez](https://github.com/jaojogadez). -->
+ -->
 
