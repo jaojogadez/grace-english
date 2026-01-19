@@ -52,7 +52,7 @@
               <a class="nav-link" aria-current="page" href="home.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="the-teacher.html">The teacher</a>
+              <a class="nav-link" href="the-teacher.html">The teacher</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="cursos.html">Cursos</a>
@@ -61,7 +61,7 @@
               <a class="nav-link" href="student-area.html">Área do Aluno</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.php">Contato</a>
+              <a class="nav-link active" href="contact.php">Contato</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="cadastre.html">Cadastro</a>
@@ -156,43 +156,80 @@
     </div>
 
     <main class="container-fluid col-md-9">
-      <section class="row container align-items-center m-auto gx-5 mb-5">
-        <div class="col-md-11 d-flex align-items-center gap-3">
-          <img
-            src="../images/the-theacher.png"
-            alt="Theacher's photo."
-            class="img-fluid"
-          />
-          <div class="col">
-            <h1 class="h3">Veronica Azevedo - Professora de Inglês.</h1>
-            <h2 class="h4">CELTA Certification - Cambridge ESOL - NY</h2>
+      <section class="row m-auto justify-content-center gx-5 p-0 mb-5">
+        <form
+          class="row align-items-center text-dark p-5 needs-validation position-relative"
+          id="formContact"
+          method="post"
+          action="../php/salvar.php"
+          novalidate
+        >
+          <div class="text-center mb-5">
+            <h1 class="display-6 fw-normal m-0">Deseja saber mais?</h1>
+            <p class="display-6 fs-4">Deixe o seu contato</p>
           </div>
-        </div>
-      </section>
-      <section class="row container-fluid align-items-center m-auto gx-5 mb-5">
-        <article class="px-5 shadow">
-          <h3 class="fs-2 fw-normal">Minha História</h3>
-          <p class="lh-base">
-            "Em 2001, enquanto eu ainda era apenas um
-            adolescente, minha família decidiu embarcar em uma emocionante
-            aventura: mudar-se para os Estados Unidos em busca de novas
-            oportunidades e experiências. Durante os 12 anos que passamos em
-            dois estados diferentes, tive o privilégio de frequentar o ensino
-            médio em uma escola americana e prosseguir com alguns anos de ensino
-            superior. Essa jornada não apenas ampliou meus horizontes, mas
-            também despertou em mim uma paixão pelo ensino e pela língua
-            inglesa. Antes de retornar ao Brasil, decidi que queria compartilhar
-            meu conhecimento com outros buscadores de aprendizado. Foi assim que
-            embarquei na missão de obter meu certificado CELTA, que me habilita
-            a ensinar inglês em qualquer lugar do mundo. Agora, como instrutor
-            certificado, estou dedicado a capacitar meus alunos a alcançarem
-            seus objetivos de fluência no inglês, oferecendo a eles uma
-            abordagem dinâmica, personalizada e envolvente. Juntos, vamos
-            embarcar em uma jornada emocionante de descoberta e crescimento,
-            enquanto exploramos as maravilhas da língua inglesa e construímos
-            pontes para o futuro."
-          </p>
-        </article>
+          <div class="container" style="margin-bottom: 5.5rem;">
+            <div>
+              <div
+                class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-4 text-dark"
+              >
+                <div class="col">
+                  <label for="name" class="form-label fs-5">Nome</label>
+                  <!-- Name -->
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Digite seu nome"
+                    id="nameContact"
+                    name="nome"
+                    aria-label="Digite seu nome"
+                  />
+                </div>
+                <div class="col">
+                  <label for="tel" class="form-label fs-5">Telefone</label>
+                  <!-- Tel -->
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Digite seu telefone"
+                    id="telContact"
+                    name="telefone"
+                    aria-label="Digite seu telefone"
+                  />
+                </div>
+                <div class="col">
+                  <label for="email" class="form-label fs-5">Email *</label>
+                  <!-- Email -->
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Digite seu email"
+                    id="emailContact"
+                    name="email"
+                    aria-label="Digite seu telefone"
+                    required
+                  />
+                  <div class="valid-feedback"></div>
+                </div>
+              </div>
+              <div class="col p-1">
+                <label for="message" class="form-label fs-5">Messagem</label>
+                <!-- Messagem -->
+                <textarea
+                  class="form-control"
+                  placeholder="Digite aqui a sua mensagem"
+                  id="messageContact"
+                  name="mensagem"
+                  style="height: 100px"
+                ></textarea>
+              </div>
+              <div class="d-flex justify-content-end mb-5" id="container-btn-submit">
+                <input type="submit" value="Enviar" class="btn btn-primary" />
+              </div>
+            </div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" id="waves"><path fill="#f3f4f5" fill-opacity="1" d="M0,160L13.3,149.3C26.7,139,53,117,80,96C106.7,75,133,53,160,58.7C186.7,64,213,96,240,117.3C266.7,139,293,149,320,160C346.7,171,373,181,400,208C426.7,235,453,277,480,266.7C506.7,256,533,192,560,181.3C586.7,171,613,213,640,192C666.7,171,693,85,720,74.7C746.7,64,773,128,800,154.7C826.7,181,853,171,880,160C906.7,149,933,139,960,160C986.7,181,1013,235,1040,261.3C1066.7,288,1093,288,1120,282.7C1146.7,277,1173,267,1200,240C1226.7,213,1253,171,1280,165.3C1306.7,160,1333,192,1360,192C1386.7,192,1413,160,1427,144L1440,128L1440,320L1426.7,320C1413.3,320,1387,320,1360,320C1333.3,320,1307,320,1280,320C1253.3,320,1227,320,1200,320C1173.3,320,1147,320,1120,320C1093.3,320,1067,320,1040,320C1013.3,320,987,320,960,320C933.3,320,907,320,880,320C853.3,320,827,320,800,320C773.3,320,747,320,720,320C693.3,320,667,320,640,320C613.3,320,587,320,560,320C533.3,320,507,320,480,320C453.3,320,427,320,400,320C373.3,320,347,320,320,320C293.3,320,267,320,240,320C213.3,320,187,320,160,320C133.3,320,107,320,80,320C53.3,320,27,320,13,320L0,320Z"></path></svg>
+        </form>
       </section>
     </main>
 
@@ -235,5 +272,31 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="../assets/scripts/contact.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
   </body>
 </html>
