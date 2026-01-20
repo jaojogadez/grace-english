@@ -11,7 +11,6 @@ let validateEmail = (email) => {
 }
 
 $formContact.onsubmit = (event) => {
-  event.preventDefault()
   try {
     const message = {
       name: $inputName.value,

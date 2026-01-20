@@ -1,4 +1,9 @@
 <?php
+
+echo '<pre>';
+print_r($_POST);
+exit;
+
 require 'config.php';
 
 // Garante que veio do form

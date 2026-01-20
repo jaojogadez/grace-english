@@ -161,7 +161,7 @@
           class="row align-items-center text-dark p-5 needs-validation position-relative"
           id="formContact"
           method="post"
-          action="../php/salvar.php"
+          action=""
           novalidate
         >
           <div class="text-center mb-5">
@@ -174,7 +174,7 @@
                 class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-4 text-dark"
               >
                 <div class="col">
-                  <label for="name" class="form-label fs-5">Nome</label>
+                  <label for="nameContact" class="form-label fs-5">Nome</label>
                   <!-- Name -->
                   <input
                     type="text"
@@ -183,6 +183,7 @@
                     id="nameContact"
                     name="nome"
                     aria-label="Digite seu nome"
+                    required
                   />
                 </div>
                 <div class="col">
@@ -195,6 +196,7 @@
                     id="telContact"
                     name="telefone"
                     aria-label="Digite seu telefone"
+                    required
                   />
                 </div>
                 <div class="col">
@@ -220,6 +222,7 @@
                   placeholder="Digite aqui a sua mensagem"
                   id="messageContact"
                   name="mensagem"
+                  required
                   style="height: 100px"
                 ></textarea>
               </div>
@@ -272,7 +275,7 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script src="../assets/scripts/contact.js"></script>
+    <!-- <script src="../assets/scripts/contact.js"></script> -->
     <script>
       // Example starter JavaScript for disabling form submissions if there are invalid fields
       (() => {
@@ -300,3 +303,59 @@
     </script>
   </body>
 </html>
+<?php
+// Só executa se o formulário for enviado
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+
+    // CONEXÃO PDO
+    $host = "localhost";
+    $db   = "leads_ingles";
+    $user = "root";
+    $pass = "";
+
+    try {
+        $pdo = new PDO(
+            "mysql:host=$host;dbname=$db;charset=utf8mb4",
+            $user,
+            $pass,
+            [
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+            ]
+        );
+    } catch (PDOException $e) {
+        die("Erro na conexão: " . $e->getMessage());
+    }
+
+    // RECEBER DADOS
+    $nome = trim($_POST['nome'] ?? '');
+    $telefone = trim($_POST['telefone'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+    $mensagem = trim($_POST['mensagem'] ?? '');
+
+    // VALIDAÇÃO
+    if (!$nome || !$telefone || !$email || !$mensagem) {
+        echo "<script>alert('Preencha todos os campos');</script>";
+        return;
+    }
+
+    // INSERT COM PDO
+    $sql = "INSERT INTO contatos (nome, telefone, email, mensagem)
+            VALUES (:nome, :telefone, :email, :mensagem)";
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        ':nome' => $nome,
+        ':telefone' => $telefone,
+        ':email' => $email,
+        ':mensagem' => $mensagem
+    ]);
+
+    // FEEDBACK
+    echo "<script>
+        alert('Mensagem enviada com sucesso!');
+    </script>";
+}
+?>
