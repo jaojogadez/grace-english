@@ -56,7 +56,7 @@
             <a class="nav-link" href="cursos.html">Cursos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="student-area.html">Área do Aluno</a>
+            <a class="nav-link" href="student-area.php">Área do Aluno</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.php">Contato</a>
@@ -117,7 +117,7 @@
         <li class="nav-item">
           <a
             class="nav-link"
-            href="student-area.html"
+            href="student-area.php"
             data-aos="fade-up"
             data-aos-delay="400">
             <i class="bi bi-window-fullscreen"></i> Área do Aluno
