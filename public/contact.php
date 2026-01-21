@@ -1,361 +1,363 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grace English</title>
-    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <button type="button" class="btn btn-success">
-      <img
-        src="../images/whatsapp_2504957.png"
-        alt="icone-do-whatsapp"
-        width="25"
-      />
-      Fale Conosco
-    </button>
-    <nav class="navbar navbar-expand-lg mb-4 shadow-sm">
-      <div class="container col-11">
-        <a class="navbar-brand logo" href="#">
-          <img
-            src="../images/logo.png"
-            alt="Logo do Grace English"
-            class="img-fluid"
-          />
-          <div class="d-flex flex-column text-center">
-            <span>Grace</span>
-            <span>English</span>
-          </div>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasRight"
-          aria-controls="offcanvasRight"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="bi bi-list text-light"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="collapse">
-          <ul class="navbar-nav gap-3">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="home.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="the-teacher.html">The teacher</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cursos.html">Cursos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="student-area.html">Área do Aluno</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="contact.php">Contato</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cadastre.html">Cadastro</a>
-            </li>
-          </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grace English</title>
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <button type="button" class="btn btn-success">
+    <img
+      src="./images/whatsapp_2504957.png"
+      alt="icone-do-whatsapp"
+      width="25" />
+    Fale Conosco
+  </button>
+  <nav class="navbar navbar-expand-lg mb-4 shadow-sm">
+    <div class="container col-11">
+      <a class="navbar-brand logo" href="#">
+        <img
+          src="./images/logo.png"
+          alt="Logo do Grace English"
+          class="img-fluid" />
+        <div class="d-flex flex-column text-center">
+          <span>Grace</span>
+          <span>English</span>
         </div>
-      </div>
-    </nav>
-    <!-- Offcanva -->
-    <div
-      class="offcanvas offcanvas-end"
-      tabindex="-1"
-      id="offcanvasRight"
-      aria-labelledby="offcanvasNavbarLabel"
-    >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-        <button
-          type="button"
-          class="btn-close btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        >
-          <i class="bi bi-x-lg text-white"></i>
-        </button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="bi bi-list text-light"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="collapse">
+        <ul class="navbar-nav gap-3">
           <li class="nav-item">
-            <a
-              class="nav-link"
-              aria-current="page"
-              href="home.html"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <i class="bi bi-house"></i> Home
-            </a>
+            <a class="nav-link" aria-current="page" href="home.html">Home</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="the-teacher.html"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <i class="bi bi-card-text"></i> The Theacher
-            </a>
+            <a class="nav-link" href="the-teacher.html">The teacher</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="cursos.html"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <i class="bi bi-motherboard"></i> Cursos
-            </a>
+            <a class="nav-link" href="cursos.html">Cursos</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="student-area.html"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <i class="bi bi-window-fullscreen"></i> Área do Aluno
-            </a>
+            <a class="nav-link" href="student-area.html">Área do Aluno</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="contact.html"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <i class="bi bi-wechat"></i> Contato
-            </a>
+            <a class="nav-link active" href="contact.php">Contato</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="cadastre.html"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <i class="bi bi-person-lines-fill"></i> Cadastro
-            </a>
+            <a class="nav-link" href="cadastre.php">Cadastro</a>
           </li>
         </ul>
       </div>
     </div>
+  </nav>
+  <!-- Offcanva -->
+  <div
+    class="offcanvas offcanvas-end"
+    tabindex="-1"
+    id="offcanvasRight"
+    aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+      <button
+        type="button"
+        class="btn-close btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close">
+        <i class="bi bi-x-lg text-white"></i>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            aria-current="page"
+            href="home.html"
+            data-aos="fade-up"
+            data-aos-delay="100">
+            <i class="bi bi-house"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="the-teacher.html"
+            data-aos="fade-up"
+            data-aos-delay="200">
+            <i class="bi bi-card-text"></i> The Theacher
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="cursos.html"
+            data-aos="fade-up"
+            data-aos-delay="300">
+            <i class="bi bi-motherboard"></i> Cursos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="student-area.html"
+            data-aos="fade-up"
+            data-aos-delay="400">
+            <i class="bi bi-window-fullscreen"></i> Área do Aluno
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="contact.php"
+            data-aos="fade-up"
+            data-aos-delay="600">
+            <i class="bi bi-wechat"></i> Contato
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="cadastre.php"
+            data-aos="fade-up"
+            data-aos-delay="600">
+            <i class="bi bi-person-lines-fill"></i> Cadastro
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-    <main class="container-fluid col-md-9">
-      <section class="row m-auto justify-content-center gx-5 p-0 mb-5">
-        <form
-          class="row align-items-center text-dark p-5 needs-validation position-relative"
-          id="formContact"
-          method="post"
-          action=""
-          novalidate
-        >
-          <div class="text-center mb-5">
-            <h1 class="display-6 fw-normal m-0">Deseja saber mais?</h1>
-            <p class="display-6 fs-4">Deixe o seu contato</p>
+  <main class="container-fluid col-md-9">
+    <section class="row m-auto justify-content-center gx-5 p-0 mb-5">
+      <div
+        id="successMessage"
+        class="text-center p-5 d-none">
+        <div class="card shadow-lg border-0">
+          <div class="card-body p-5">
+            <h2 class="text-success mb-3">Mensagem enviada! 🎉</h2>
+            <p class="fs-5">
+              Obrigado pelo contato. Em breve entraremos em contato com você.
+            </p>
+
+            <button
+              class="btn btn-primary mt-4"
+              onclick="resetForm()">
+              Enviar outra mensagem
+            </button>
           </div>
-          <div class="container" style="margin-bottom: 5.5rem;">
-            <div>
-              <div
-                class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-4 text-dark"
-              >
-                <div class="col">
-                  <label for="nameContact" class="form-label fs-5">Nome</label>
-                  <!-- Name -->
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Digite seu nome"
-                    id="nameContact"
-                    name="nome"
-                    aria-label="Digite seu nome"
-                    required
-                  />
-                </div>
-                <div class="col">
-                  <label for="tel" class="form-label fs-5">Telefone</label>
-                  <!-- Tel -->
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Digite seu telefone"
-                    id="telContact"
-                    name="telefone"
-                    aria-label="Digite seu telefone"
-                    required
-                  />
-                </div>
-                <div class="col">
-                  <label for="email" class="form-label fs-5">Email *</label>
-                  <!-- Email -->
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Digite seu email"
-                    id="emailContact"
-                    name="email"
-                    aria-label="Digite seu telefone"
-                    required
-                  />
-                  <div class="valid-feedback"></div>
-                </div>
-              </div>
-              <div class="col p-1">
-                <label for="message" class="form-label fs-5">Messagem</label>
-                <!-- Messagem -->
-                <textarea
+        </div>
+      </div>
+      <form
+        class="row align-items-center text-dark p-5 needs-validation position-relative"
+        id="formContact"
+        method="post"
+        action=""
+        novalidate>
+        <div class="text-center mb-5">
+          <h1 class="display-6 fw-normal m-0">Deseja saber mais?</h1>
+          <p class="display-6 fs-4">Deixe o seu contato</p>
+        </div>
+        <div class="container" style="margin-bottom: 5.5rem;">
+          <div>
+            <div
+              class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-4 text-dark">
+              <div class="col">
+                <label for="nameContact" class="form-label fs-5">Nome</label>
+                <!-- Name -->
+                <input
+                  type="text"
                   class="form-control"
-                  placeholder="Digite aqui a sua mensagem"
-                  id="messageContact"
-                  name="mensagem"
-                  required
-                  style="height: 100px"
-                ></textarea>
+                  placeholder="Digite seu nome"
+                  id="nameContact"
+                  name="nome"
+                  aria-label="Digite seu nome"
+                  required />
               </div>
-              <div class="d-flex justify-content-end mb-5" id="container-btn-submit">
-                <input type="submit" value="Enviar" class="btn btn-primary" />
+              <div class="col">
+                <label for="tel" class="form-label fs-5">Telefone</label>
+                <!-- Tel -->
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Digite seu telefone"
+                  id="telContact"
+                  name="telefone"
+                  aria-label="Digite seu telefone"
+                  required />
+              </div>
+              <div class="col">
+                <label for="email" class="form-label fs-5">Email *</label>
+                <!-- Email -->
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Digite seu email"
+                  id="emailContact"
+                  name="email"
+                  aria-label="Digite seu telefone"
+                  required />
+                <div class="valid-feedback"></div>
               </div>
             </div>
+            <div class="col p-1">
+              <label for="message" class="form-label fs-5">Messagem</label>
+              <!-- Messagem -->
+              <textarea
+                class="form-control"
+                placeholder="Digite aqui a sua mensagem"
+                id="messageContact"
+                name="mensagem"
+                required
+                style="height: 100px"></textarea>
+            </div>
+            <div class="d-flex justify-content-end mb-5" id="container-btn-submit">
+              <input type="submit" value="Enviar" class="btn btn-primary" />
+            </div>
           </div>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" id="waves"><path fill="#f3f4f5" fill-opacity="1" d="M0,160L13.3,149.3C26.7,139,53,117,80,96C106.7,75,133,53,160,58.7C186.7,64,213,96,240,117.3C266.7,139,293,149,320,160C346.7,171,373,181,400,208C426.7,235,453,277,480,266.7C506.7,256,533,192,560,181.3C586.7,171,613,213,640,192C666.7,171,693,85,720,74.7C746.7,64,773,128,800,154.7C826.7,181,853,171,880,160C906.7,149,933,139,960,160C986.7,181,1013,235,1040,261.3C1066.7,288,1093,288,1120,282.7C1146.7,277,1173,267,1200,240C1226.7,213,1253,171,1280,165.3C1306.7,160,1333,192,1360,192C1386.7,192,1413,160,1427,144L1440,128L1440,320L1426.7,320C1413.3,320,1387,320,1360,320C1333.3,320,1307,320,1280,320C1253.3,320,1227,320,1200,320C1173.3,320,1147,320,1120,320C1093.3,320,1067,320,1040,320C1013.3,320,987,320,960,320C933.3,320,907,320,880,320C853.3,320,827,320,800,320C773.3,320,747,320,720,320C693.3,320,667,320,640,320C613.3,320,587,320,560,320C533.3,320,507,320,480,320C453.3,320,427,320,400,320C373.3,320,347,320,320,320C293.3,320,267,320,240,320C213.3,320,187,320,160,320C133.3,320,107,320,80,320C53.3,320,27,320,13,320L0,320Z"></path></svg>
-        </form>
-      </section>
-    </main>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" id="waves">
+          <path fill="#f3f4f5" fill-opacity="1" d="M0,160L13.3,149.3C26.7,139,53,117,80,96C106.7,75,133,53,160,58.7C186.7,64,213,96,240,117.3C266.7,139,293,149,320,160C346.7,171,373,181,400,208C426.7,235,453,277,480,266.7C506.7,256,533,192,560,181.3C586.7,171,613,213,640,192C666.7,171,693,85,720,74.7C746.7,64,773,128,800,154.7C826.7,181,853,171,880,160C906.7,149,933,139,960,160C986.7,181,1013,235,1040,261.3C1066.7,288,1093,288,1120,282.7C1146.7,277,1173,267,1200,240C1226.7,213,1253,171,1280,165.3C1306.7,160,1333,192,1360,192C1386.7,192,1413,160,1427,144L1440,128L1440,320L1426.7,320C1413.3,320,1387,320,1360,320C1333.3,320,1307,320,1280,320C1253.3,320,1227,320,1200,320C1173.3,320,1147,320,1120,320C1093.3,320,1067,320,1040,320C1013.3,320,987,320,960,320C933.3,320,907,320,880,320C853.3,320,827,320,800,320C773.3,320,747,320,720,320C693.3,320,667,320,640,320C613.3,320,587,320,560,320C533.3,320,507,320,480,320C453.3,320,427,320,400,320C373.3,320,347,320,320,320C293.3,320,267,320,240,320C213.3,320,187,320,160,320C133.3,320,107,320,80,320C53.3,320,27,320,13,320L0,320Z"></path>
+        </svg>
+      </form>
+    </section>
+  </main>
 
-    <footer
-      class="container-fluid d-flex flex-column justify-content-center p-0"
-    >
-      <div class="row container align-items-center m-auto gx-5">
-        <div class="col-md-6">
-          <ul class="nav flex-column">
-            <h5 class="display-6 fs-5 fw-semibold">Siga - nos:</h5>
-            <li class="nav-item">
-              <a
-                href="http://instagram.com"
-                class="nav-link text-light"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="../images/instagram.png"
-                  alt="icone-do-instagram"
-                  width="25"
-                />
-                @graceenglish
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-6 text-center">
-          <p class="display-6 fs-5 m-0">Contato: (33) 99817 - 0388</p>
-        </div>
+  <footer
+    class="container-fluid d-flex flex-column justify-content-center p-0">
+    <div class="row container align-items-center m-auto gx-5">
+      <div class="col-md-6">
+        <ul class="nav flex-column">
+          <h5 class="display-6 fs-5 fw-semibold">Siga - nos:</h5>
+          <li class="nav-item">
+            <a
+              href="http://instagram.com"
+              class="nav-link text-light"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img
+                src="./images/instagram.png"
+                alt="icone-do-instagram"
+                width="25" />
+              @graceenglish
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="col-12 m-auto text-start p-2">
-        <div class="container col-7">
-          <small class="fw-semibold">© 2025 by Grace English.</small>
-        </div>
+      <div class="col-md-6 text-center">
+        <p class="display-6 fs-5 m-0">Contato: (33) 99817 - 0388</p>
       </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-    <!-- <script src="../assets/scripts/contact.js"></script> -->
-    <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (() => {
-        "use strict";
+    </div>
+    <div class="col-12 m-auto text-start p-2">
+      <div class="container col-7">
+        <small class="fw-semibold">© 2025 by Grace English.</small>
+      </div>
+    </div>
+  </footer>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script src="./assets/scripts/contact.js"></script>
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      "use strict";
 
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        const forms = document.querySelectorAll(".needs-validation");
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll(".needs-validation");
 
-        // Loop over them and prevent submission
-        Array.from(forms).forEach((form) => {
-          form.addEventListener(
-            "submit",
-            (event) => {
-              if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
+      // Loop over them and prevent submission
+      Array.from(forms).forEach((form) => {
+        form.addEventListener(
+          "submit",
+          (event) => {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
 
-              form.classList.add("was-validated");
-            },
-            false
-          );
-        });
-      })();
-    </script>
-  </body>
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+    })();
+  </script>
+</body>
+
 </html>
 <?php
-// Só executa se o formulário for enviado
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    ini_set('display_errors', 1);
-    error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+  error_reporting(E_ALL);
 
-    // CONEXÃO PDO
-    $host = "localhost";
-    $db   = "leads_ingles";
-    $user = "root";
-    $pass = "";
+  // CONEXÃO PDO
+  $host = "localhost";
+  $db   = "leads_ingles";
+  $user = "root";
+  $pass = "";
 
-    try {
-        $pdo = new PDO(
-            "mysql:host=$host;dbname=$db;charset=utf8mb4",
-            $user,
-            $pass,
-            [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-            ]
-        );
-    } catch (PDOException $e) {
-        die("Erro na conexão: " . $e->getMessage());
-    }
+  try {
+    $pdo = new PDO(
+      "mysql:host=$host;dbname=$db;charset=utf8mb4",
+      $user,
+      $pass,
+      [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+      ]
+    );
+  } catch (PDOException $e) {
+    die("Erro na conexão: " . $e->getMessage());
+  }
 
-    // RECEBER DADOS
-    $nome = trim($_POST['nome'] ?? '');
-    $telefone = trim($_POST['telefone'] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $mensagem = trim($_POST['mensagem'] ?? '');
+  // RECEBER DADOS
+  $nome = trim($_POST['nome'] ?? '');
+  $telefone = trim($_POST['telefone'] ?? '');
+  $email = trim($_POST['email'] ?? '');
+  $mensagem = trim($_POST['mensagem'] ?? '');
 
-    // VALIDAÇÃO
-    if (!$nome || !$telefone || !$email || !$mensagem) {
-        echo "<script>alert('Preencha todos os campos');</script>";
-        return;
-    }
+  // VALIDAÇÃO
+  if (!$nome || !$telefone || !$email || !$mensagem) {
+    echo "<script>alert('Preencha todos os campos');</script>";
+    return;
+  }
 
-    // INSERT COM PDO
-    $sql = "INSERT INTO contatos (nome, telefone, email, mensagem)
+  // INSERT COM PDO
+  $sql = "INSERT INTO contatos (nome, telefone, email, mensagem)
             VALUES (:nome, :telefone, :email, :mensagem)";
 
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        ':nome' => $nome,
-        ':telefone' => $telefone,
-        ':email' => $email,
-        ':mensagem' => $mensagem
-    ]);
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([
+    ':nome' => $nome,
+    ':telefone' => $telefone,
+    ':email' => $email,
+    ':mensagem' => $mensagem
+  ]);
 
-    // FEEDBACK
-    echo "<script>
-        alert('Mensagem enviada com sucesso!');
-    </script>";
+  // FEEDBACK
+  echo "<script>
+    document.getElementById('formContact').classList.add('d-none');
+    document.getElementById('successMessage').classList.remove('d-none');
+</script>";
 }
 ?>
