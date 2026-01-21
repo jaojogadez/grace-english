@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $_SESSION['usuario_id']    = $user['id'];
       $_SESSION['usuario_email'] = $user['email'];
 
-      header("Location: ../dashboard/index.php");
+      header("Location: ./dashboard.php");
       exit;
     }
 
@@ -362,7 +362,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       });
     })();
   </script>
-  <script src="./assets/scripts/login.js"></script>
+  <!-- <script src="./assets/scripts/login.js"></script> -->
 </body>
 
 </html>
